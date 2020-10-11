@@ -30,10 +30,13 @@ channel = connection.channel()
 
 #Create a new queue
 # #channel.queue_declare(queue='hello')
+#The next step, just like before, is to make sure that the queue exists. 
+
+
 
 #We have 2 queues on RabbotMQ, client_info and client_log with a fanout called fanout_first
 
-channel.basic_publish(exchange='fanout_first',routing_key='hello',body='Hello World! from Python')
+channel.basic_publish(exchange='fanout_first',routing_key='',body='Hello World! from Python')
 print(" [x] Sent 'Hello World! on Python'")
 
 connection.close()
