@@ -1,2 +1,4 @@
 #!/bin/bash
-python3 send.py
+chromium http://localhost:15672/
+docker-compose -f docker-compose.yml up
+

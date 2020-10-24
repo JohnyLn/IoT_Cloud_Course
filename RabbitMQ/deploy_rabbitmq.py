@@ -1,5 +1,6 @@
 from pyrabbit.api import Client
 #https://github.com/bkjones/pyrabbit
+#https://rawcdn.githack.com/rabbitmq/rabbitmq-management/v3.8.9/priv/www/api/index.html
 #pip3 install pyrabbit
 #https://pyrabbit.readthedocs.io/en/latest/
 #https://pyrabbit.readthedocs.io/en/latest/api.html
