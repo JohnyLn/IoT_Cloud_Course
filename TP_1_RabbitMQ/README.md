@@ -16,13 +16,13 @@
 1. Check if Python ou Python3 is installed
     1. Create the architecture with a client id with the script and a welcome message in the broker [deploy_rabbitmq.py](deploy_rabbitmq.py)
 
-    `python3 deploy_rabbitmq.py`
+      `python3 deploy_rabbitmq.py`
 
 
 
 1. Stop and reset virtual host with [reset_rabbitmq.py](reset_rabbitmq.py)
 
-    `python3 reset_rabbitmq.py'
+    `python3 reset_rabbitmq.py`
 
 ### Content
 The [deploy_rabbitmq.py](deploy_rabbitmq.py) deploy the follow architecture in rabbitMQ.
