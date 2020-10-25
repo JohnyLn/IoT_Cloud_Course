@@ -4,15 +4,25 @@
 ### Overview
 1. Install chronium or another browser
     1. Launch RabbitMQ with docker in a terminal
+
         `chromium http://localhost:15672/
+
         docker-compose -f docker-compose.yml up` 
 
 1. In new terminal launch a second mock-data
+
     `docker-compose -f docker-compose-data.yml up`
 
 1. Check if Python ou Python3 is installed
-    1. Create the architecture with a client id with the script [deploy_rabbitmq.py](deploy_rabbitmq.py)
+    1. Create the architecture with a client id with the script and a welcome message in the broker [deploy_rabbitmq.py](deploy_rabbitmq.py)
 
+    `python3 deploy_rabbitmq.py`
+
+
+
+1. Stop and reset virtual host with [reset_rabbitmq.py](reset_rabbitmq.py)
+
+    `python3 reset_rabbitmq.py'
 
 ### Content
 The [deploy_rabbitmq.py](deploy_rabbitmq.py) deploy the follow architecture in rabbitMQ.
@@ -24,7 +34,7 @@ We use 2 docker compose :
 `https://docs.docker.com/samples/library/rabbitmq/`
 
 [docker-compose.yml](docker-compose.yml)
-`
+```
 version: '3.7'
 services:
 
@@ -47,12 +57,12 @@ services:
 networks:
   iot-labs:
     external: true
-`
+```
 
 `https://github.com/Senzing/mock-data-generator`
 
 [docker-compose-data.yml](docker-compose-data.yml)
-` version: '3.7'
+``` version: '3.7'
 services:
 
   moke1:
@@ -81,7 +91,7 @@ services:
 networks:
   iot-labs:
     external: true
-`
+```
 
 
 

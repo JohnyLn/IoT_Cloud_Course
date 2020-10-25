@@ -5,7 +5,7 @@ import pika,sys
 
 
 credentials = pika.PlainCredentials('rabbitmq','rabbitmq')
-parameters = pika.ConnectionParameters(host='localhost',port=5672,virtual_host='client1',credentials=credentials)
+parameters = pika.ConnectionParameters(host='localhost',port=5672,virtual_host='/',credentials=credentials)
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
