@@ -5,9 +5,13 @@ The [deploy_rabbitmq.py](deploy_rabbitmq.py) deploy the follow architecture in r
 ![](archi_example.png)
 
 We use 2 docker compose :
-'https://docs.docker.com/samples/library/rabbitmq/'
+
+`https://docs.docker.com/samples/library/rabbitmq/`
+
 [docker-compose.yml](docker-compose.yml])
-'https://github.com/Senzing/mock-data-generator'
+
+`https://github.com/Senzing/mock-data-generator`
+
 [docker-compose-data.yml](docker-compose-data.yml])
 
 
