@@ -5,9 +5,9 @@
 1. Install chronium or another browser
     1. Launch RabbitMQ with docker in a terminal
 
-        `chromium http://localhost:15672/
+        `chromium http://localhost:15672/` or http://localhost:15672/
 
-        docker-compose -f docker-compose.yml up` 
+        `docker-compose -f docker-compose.yml up` 
 
 1. In new terminal launch a second mock-data
 
@@ -98,7 +98,9 @@ networks:
 ### Others Python script
 
 [send_message.py](send_message.py)
+
 [receive.py](receive.py)
+
 [send.py](send.py)
 
 
