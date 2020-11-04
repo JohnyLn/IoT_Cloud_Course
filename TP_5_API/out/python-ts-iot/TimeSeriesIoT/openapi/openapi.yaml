@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  description: Optionnel sur une ou plusieurs lignes.
+  title: TimeSeries API IoT
+  version: 1.0.0
+servers:
+- description: Description optionnelle. Par exemple, ici, serveur interne dédié au
+    test.
+  url: http://localhost:8080/v1
+- description: Description optionnelle. Par exemple, ici, serveur de production.
+  url: http://api.example.com/v1
+paths:
+  /mean/{sensorId}:
+    get:
+      description: Description optionnelle.
+      operationId: mean_sensor_id_get
+      parameters:
+      - description: L'identifiant du capteur où récupérer les données.
+        explode: false
+        in: path
+        name: sensorId
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Integer/timestamp de la date de début.
+        explode: true
+        in: query
+        name: startDate
+        required: true
+        schema:
+          type: integer
+        style: form
+      - description: Integer/timestamp de la date de fin.
+        explode: true
+        in: query
+        name: endDate
+        required: true
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: integer
+                type: array
+          description: Une JSON array de la moyenne des valeurs entre les deux dates
+            fournies.
+        default:
+          description: Unexpected error.
+      summary: Renvoie la moyenne d'un capteur entre deux dates
+      x-openapi-router-controller: TimeSeriesIoT.controllers.default_controller
+components:
+  schemas: {}
