@@ -27,7 +27,7 @@
 ### Content
 The [deploy_rabbitmq.py](deploy_rabbitmq.py) deploy the follow architecture in rabbitMQ.
 
-![](archi_example.png)
+![](archi_example.jpg)
 
 We use 2 docker compose :
 
