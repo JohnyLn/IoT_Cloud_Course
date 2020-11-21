@@ -6,7 +6,7 @@ import pika, sys, os
 def main():
         #Connection to rabbitmq 
         credentials = pika.PlainCredentials('rabbitmq','rabbitmq')
-        parameters = pika.ConnectionParameters(host='localhost',port=5672,virtual_host='client1',credentials=credentials)
+        parameters = pika.ConnectionParameters(host='localhost',port=5672,credentials=credentials)
         connection = pika.BlockingConnection(parameters)
         channel = connection.channel()
 
@@ -16,7 +16,7 @@ def main():
                 print(" [x] Reveived %r" % body)
         #Next, we need to tell RabbitMQ that this particular callback function 
         # should receive messages from our client_info queue:
-        channel.basic_consume(queue='client_info', on_message_callback=callback,auto_ack=True)
+        channel.basic_consume(queue='hello', on_message_callback=callback,auto_ack=True)
 
         print(' [*] Waiting for messages. To exit press CTRL+C')
         channel.start_consuming()

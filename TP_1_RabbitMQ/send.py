@@ -29,7 +29,7 @@ connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
 #Create a new queue
-# #channel.queue_declare(queue='hello')
+#hannel.queue_declare(queue='hello')
 #The next step, just like before, is to make sure that the queue exists. 
 
 
