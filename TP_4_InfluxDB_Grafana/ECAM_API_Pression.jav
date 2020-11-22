@@ -4,7 +4,7 @@ if (flowFile != null) {
     var IOUtils = Java.type("org.apache.commons.io.IOUtils");
     var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
     var error = false;
-    //var measure = "client1"
+    var measure = "paris_weather"
     var line = "";
     var sep = "\n"
 
@@ -23,8 +23,8 @@ if (flowFile != null) {
             for (key in message_content) {
                 if (key == 'city') {
                     city = message_content[key]
-                } else if (key == 'time') {
-                    date = message_content[key] * 1000 * 1000 * 1000
+                } else if (key == 'date') {
+                    date = message_content[key]
                 } else if (key == 'temp') {
                     temp = message_content[key]
                 } else if (key == 'pressure') {
@@ -34,7 +34,7 @@ if (flowFile != null) {
                     humi = message_content[key]
                 }
             }
-            line = city + " " + "humi" + "=" + humi + " "  + date + sep
+            line = measure + " " + "pression" + "=" + pres + " " + sep
 
             // Write output content
             outputStream.write(line.getBytes(StandardCharsets.UTF_8));

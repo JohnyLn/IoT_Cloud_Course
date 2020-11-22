@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
-    <description>Prototype pour envoyer des données de l'API Weather sur InfluxDB
-Version 2 avec tentative de convertir les types int en string et le content type</description>
+    <description>API Weather and data_gen rabbitmq data into influxdb database</description>
     <groupId>f005e610-0175-1000-fbc1-769b961c2c17</groupId>
-    <name>API_Weather_Prototype_InfluxDB_V2</name>
+    <name>API_Rabbit_MQ_InfluxDB</name>
     <snippet>
         <connections>
             <id>0dff8fc6-93f5-32a7-0000-000000000000</id>
@@ -61,8 +60,8 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1843.6925659179688</x>
-                <y>625.2354809681088</y>
+                <x>1994.8847045898438</x>
+                <y>737.1493603626401</y>
             </bends>
             <destination>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
@@ -85,21 +84,13 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>50f20e50-997c-32d2-0000-000000000000</id>
+            <id>52be1d4b-5995-3b80-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>240.5045166015625</x>
-                <y>539.0513684192807</y>
-            </bends>
-            <bends>
-                <x>185.8798828125</x>
-                <y>494.4574658313901</y>
-            </bends>
             <destination>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>a62d3476-6ea8-39b6-0000-000000000000</id>
+                <id>b316c688-f0fc-3433-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -109,10 +100,10 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
             <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
             <name></name>
-            <selectedRelationships>failure</selectedRelationships>
+            <selectedRelationships>success</selectedRelationships>
             <source>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>a62d3476-6ea8-39b6-0000-000000000000</id>
+                <id>7382a135-9772-308b-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -193,6 +184,31 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <zIndex>0</zIndex>
         </connections>
         <connections>
+            <id>71f801d7-1fe8-35bd-0000-000000000000</id>
+            <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
+                <id>7d8b01e2-7323-3f14-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
+                <id>7382a135-9772-308b-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
             <id>728ded00-3152-30aa-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -268,42 +284,17 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>90a69b03-62ee-3d9a-0000-000000000000</id>
-            <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>b316c688-f0fc-3433-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>success</selectedRelationships>
-            <source>
-                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>7382a135-9772-308b-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
             <id>a35ac0f5-7ae0-3002-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1369.47900390625</x>
-                <y>965.0235363880307</y>
+                <x>1507.34814453125</x>
+                <y>957.029700938812</y>
             </bends>
             <bends>
-                <x>1310.9420471191406</x>
-                <y>977.3451611438901</y>
+                <x>1448.8111877441406</x>
+                <y>969.3513256946713</y>
             </bends>
             <destination>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
@@ -326,21 +317,13 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>abd1b1c5-1ecb-370d-0000-000000000000</id>
+            <id>cb596253-3228-37aa-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>570.9515380859375</x>
-                <y>514.1128613392026</y>
-            </bends>
-            <bends>
-                <x>542.479248046875</x>
-                <y>608.6782299915463</y>
-            </bends>
             <destination>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>b316c688-f0fc-3433-0000-000000000000</id>
+                <id>20e8a70b-73d0-3ace-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -350,43 +333,10 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
             <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
             <name></name>
-            <selectedRelationships>failure</selectedRelationships>
+            <selectedRelationships>success</selectedRelationships>
             <source>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>b316c688-f0fc-3433-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>c9922e8c-4283-3d73-0000-000000000000</id>
-            <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>588.6287649419473</x>
-                <y>244.32095877614097</y>
-            </bends>
-            <bends>
-                <x>515.3577688481973</x>
-                <y>303.2994286247738</y>
-            </bends>
-            <destination>
-                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>7382a135-9772-308b-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>failure</selectedRelationships>
-            <source>
-                <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
-                <id>7382a135-9772-308b-0000-000000000000</id>
+                <id>7d8b01e2-7323-3f14-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
@@ -422,12 +372,12 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1272.3025318797922</x>
+                <x>991.8269459422922</x>
                 <y>40.0</y>
             </bends>
             <bends>
-                <x>1378.2341725047922</x>
-                <y>47.05809563398361</y>
+                <x>947.2078053172922</x>
+                <y>193.61201637983322</y>
             </bends>
             <destination>
                 <groupId>f001a5af-17a6-3b44-0000-000000000000</groupId>
@@ -453,8 +403,8 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <id>20e8a70b-73d0-3ace-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>519.5436937905633</x>
-                <y>801.1460258661492</y>
+                <x>542.3015062905633</x>
+                <y>866.8880912958367</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -531,7 +481,7 @@ Version 2 avec tentative de convertir les types int en string et le content type
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -539,8 +489,8 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <id>2b6dc499-1f7b-35d1-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>1255.9043712615967</x>
-                <y>120.09057587777681</y>
+                <x>1139.3028087615967</x>
+                <y>158.72749299203463</y>
             </position>
             <bundle>
                 <artifact>nifi-amqp-nar</artifact>
@@ -687,7 +637,7 @@ Version 2 avec tentative de convertir les types int en string et le content type
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.amqp.processors.ConsumeAMQP</type>
         </processors>
@@ -695,7 +645,7 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <id>2c0513e0-46a5-3be5-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>809.3025318797922</x>
+                <x>528.8269459422922</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -986,7 +936,7 @@ Version 2 avec tentative de convertir les types int en string et le content type
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>15 sec</schedulingPeriod>
+                <schedulingPeriod>30 sec</schedulingPeriod>
                 <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                 <yieldDuration>1 sec</yieldDuration>
             </config>
@@ -1020,8 +970,8 @@ Version 2 avec tentative de convertir les types int en string et le content type
             <id>5b0ffca3-33bf-3c3c-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>1259.0989990234375</x>
-                <y>344.52835816537447</y>
+                <x>1286.2130126953125</x>
+                <y>413.84879273568697</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -1129,7 +1079,7 @@ if (flowFile != null) {
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>ExecuteScript_ECAM_Data</name>
+            <name>ExecuteScript_ECAM_Data_Rabbit</name>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>failure</name>
@@ -1146,8 +1096,8 @@ if (flowFile != null) {
             <id>7382a135-9772-308b-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>717.1736868169473</x>
-                <y>242.9579064079769</y>
+                <x>401.89170439507234</x>
+                <y>236.03282706227378</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1212,12 +1162,14 @@ if (flowFile != null) {
                     </entry>
                     <entry>
                         <key>jolt-spec</key>
-                        <value>[{
+                        <value>
+
+[{
     "operation": "shift",
     "spec": {
       "location": {
         "name": "city",
-        "localtime_epoch": "time"
+        "localtime_epoch": "date"
       },
       "current": {
         "temperature": "temp",
@@ -1229,12 +1181,13 @@ if (flowFile != null) {
   {
     "operation": "modify-overwrite-beta",
     "spec": {
-      "time": "=toString",
+      "date": "=toString",
       "pressure": "=toString",
       "temp": "=toString",
       "humidity": "=toString"
     }
 }]
+
 </value>
                     </entry>
                     <entry>
@@ -1254,23 +1207,156 @@ if (flowFile != null) {
             <executionNodeRestricted>false</executionNodeRestricted>
             <name>JoltTransformJSON</name>
             <relationships>
-                <autoTerminate>false</autoTerminate>
+                <autoTerminate>true</autoTerminate>
                 <name>failure</name>
             </relationships>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.JoltTransformJSON</type>
+        </processors>
+        <processors>
+            <id>7d8b01e2-7323-3f14-0000-000000000000</id>
+            <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
+            <position>
+                <x>448.226318359375</x>
+                <y>550.0105969349057</y>
+            </position>
+            <bundle>
+                <artifact>nifi-scripting-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Script Engine</key>
+                        <value>
+                            <name>Script Engine</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Script File</key>
+                        <value>
+                            <name>Script File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Script Body</key>
+                        <value>
+                            <name>Script Body</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Module Directory</key>
+                        <value>
+                            <name>Module Directory</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Script Engine</key>
+                        <value>ECMAScript</value>
+                    </entry>
+                    <entry>
+                        <key>Script File</key>
+                    </entry>
+                    <entry>
+                        <key>Script Body</key>
+                        <value>flowFile = session.get();
+if (flowFile != null) {
+    var StreamCallback = Java.type("org.apache.nifi.processor.io.StreamCallback");
+    var IOUtils = Java.type("org.apache.commons.io.IOUtils");
+    var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
+    var error = false;
+    var measure = "paris_weather"
+    var line = "";
+    var sep = "\n"
+
+    // Get attributes
+    flowFile = session.write(flowFile, new StreamCallback(function (inputStream, outputStream) {
+        var content = IOUtils.toString(inputStream, StandardCharsets.UTF_8); // message or content
+        var message_content = {};
+        var city = "";
+        var date = "";
+        var temp = "";
+        var pres = "";
+        var humi = "";
+
+        try {
+            message_content = JSON.parse(content);
+            for (key in message_content) {
+                if (key == 'city') {
+                    city = message_content[key]
+                } else if (key == 'date') {
+                    date = message_content[key]
+                } else if (key == 'temp') {
+                    temp = message_content[key]
+                } else if (key == 'pressure') {
+                    pres = message_content[key]
+                }
+                else if (key == 'humidity') {
+                    humi = message_content[key]
+                }
+            }
+            line = measure + " " + "pression" + "=" + pres + " " + sep
+
+            // Write output content
+            outputStream.write(line.getBytes(StandardCharsets.UTF_8));
+
+        } catch (e) {
+            error = true;
+            log.error('Something went wrong', e)
+            outputStream.write(content.getBytes(StandardCharsets.UTF_8));
+        }
+    }));
+
+    if (error) {
+        session.transfer(flowFile, REL_FAILURE)
+    } else {
+        session.transfer(flowFile, REL_SUCCESS)
+    }
+}</value>
+                    </entry>
+                    <entry>
+                        <key>Module Directory</key>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ExecuteScript_ECAM_Data_Pression</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.script.ExecuteScript</type>
         </processors>
         <processors>
             <id>98c0b4ab-0a78-3b63-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>1856.081298828125</x>
-                <y>350.36096924935885</y>
+                <x>1914.011962890625</x>
+                <y>363.6840588489682</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1384,7 +1470,7 @@ if (flowFile != null) {
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
-                <y>589.648353282562</y>
+                <y>569.8982922474057</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -1436,50 +1522,57 @@ if (flowFile != null) {
                         <key>Script Body</key>
                         <value>flowFile = session.get();
 if (flowFile != null) {
-	var StreamCallback = Java.type("org.apache.nifi.processor.io.StreamCallback");
-	var IOUtils = Java.type("org.apache.commons.io.IOUtils");
-	var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
-	var error = false;
-	var measure = "weather"
-	var line = "";
-	var sep = "\n"
+    var StreamCallback = Java.type("org.apache.nifi.processor.io.StreamCallback");
+    var IOUtils = Java.type("org.apache.commons.io.IOUtils");
+    var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
+    var error = false;
+    var measure = "paris_weather"
+    var line = "";
+    var sep = "\n"
 
-	// Get attributes
-	flowFile = session.write(flowFile, new StreamCallback(function (inputStream, outputStream) {
-	    var content = IOUtils.toString(inputStream, StandardCharsets.UTF_8); // message or content
-	    var message_content = {};
-	    var sensor = "";
-	    var date = "";
-	    var value = "";
+    // Get attributes
+    flowFile = session.write(flowFile, new StreamCallback(function (inputStream, outputStream) {
+        var content = IOUtils.toString(inputStream, StandardCharsets.UTF_8); // message or content
+        var message_content = {};
+        var city = "";
+        var date = "";
+        var temp = "";
+        var pres = "";
+        var humi = "";
 
-	    try {
-		message_content = JSON.parse(content);
-		for (key in message_content){
-		    if (key == 'city') {
-		        sensor = message_content[key]
-		    } else if (key == 'time') {
-			date = message_content[key] * 1000 * 1000 * 1000
-		    } else if (key == 'pressure') {
-			value = message_content[key]
-		    }
-		}
-		line = measure + " " + sensor + "=" + value + " " + date + sep
+        try {
+            message_content = JSON.parse(content);
+            for (key in message_content) {
+                if (key == 'city') {
+                    city = message_content[key]
+                } else if (key == 'date') {
+                    date = message_content[key]
+                } else if (key == 'temp') {
+                    temp = message_content[key]
+                } else if (key == 'pressure') {
+                    pres = message_content[key]
+                }
+                else if (key == 'humidity') {
+                    humi = message_content[key]
+                }
+            }
+            line = measure + " " + "humidity" + "=" + humi+ " " + sep
 
-		// Write output content
-		outputStream.write(line.getBytes(StandardCharsets.UTF_8));
-		
-	    } catch (e) {
-		error = true;
-		log.error('Something went wrong', e)
-		outputStream.write(content.getBytes(StandardCharsets.UTF_8));
-	    }
-	}));
+            // Write output content
+            outputStream.write(line.getBytes(StandardCharsets.UTF_8));
 
-	if (error) {
-	    session.transfer(flowFile, REL_FAILURE)
-	} else {
-	    session.transfer(flowFile, REL_SUCCESS)
-	}
+        } catch (e) {
+            error = true;
+            log.error('Something went wrong', e)
+            outputStream.write(content.getBytes(StandardCharsets.UTF_8));
+        }
+    }));
+
+    if (error) {
+        session.transfer(flowFile, REL_FAILURE)
+    } else {
+        session.transfer(flowFile, REL_SUCCESS)
+    }
 }</value>
                     </entry>
                     <entry>
@@ -1492,9 +1585,9 @@ if (flowFile != null) {
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>ExecuteScript_ECAM_Data_Pression</name>
+            <name>ExecuteScript_ECAM_Data_Humidity</name>
             <relationships>
-                <autoTerminate>false</autoTerminate>
+                <autoTerminate>true</autoTerminate>
                 <name>failure</name>
             </relationships>
             <relationships>
@@ -1509,8 +1602,8 @@ if (flowFile != null) {
             <id>b316c688-f0fc-3433-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>698.443359375</x>
-                <y>527.3437573352963</y>
+                <x>925.018798828125</x>
+                <y>535.3812329212338</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -1562,50 +1655,57 @@ if (flowFile != null) {
                         <key>Script Body</key>
                         <value>flowFile = session.get();
 if (flowFile != null) {
-	var StreamCallback = Java.type("org.apache.nifi.processor.io.StreamCallback");
-	var IOUtils = Java.type("org.apache.commons.io.IOUtils");
-	var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
-	var error = false;
-	var measure = "weather_temp"
-	var line = "";
-	var sep = "\n"
+    var StreamCallback = Java.type("org.apache.nifi.processor.io.StreamCallback");
+    var IOUtils = Java.type("org.apache.commons.io.IOUtils");
+    var StandardCharsets = Java.type("java.nio.charset.StandardCharsets");
+    var error = false;
+    var measure = "paris_weather"
+    var line = "";
+    var sep = "\n"
 
-	// Get attributes
-	flowFile = session.write(flowFile, new StreamCallback(function (inputStream, outputStream) {
-	    var content = IOUtils.toString(inputStream, StandardCharsets.UTF_8); // message or content
-	    var message_content = {};
-	    var sensor = "";
-	    var date = "";
-	    var value = "";
+    // Get attributes
+    flowFile = session.write(flowFile, new StreamCallback(function (inputStream, outputStream) {
+        var content = IOUtils.toString(inputStream, StandardCharsets.UTF_8); // message or content
+        var message_content = {};
+        var city = "";
+        var date = "";
+        var temp = "";
+        var pres = "";
+        var humi = "";
 
-	    try {
-		message_content = JSON.parse(content);
-		for (key in message_content){
-		    if (key == 'city') {
-		        sensor = message_content[key]
-		    } else if (key == 'time') {
-			date = message_content[key] * 1000 * 1000 * 1000
-		    } else if (key == 'temp') {
-			value = message_content[key]
-		    }
-		}
-		line = measure + " " + sensor + "=" + value + " " + date + sep
+        try {
+            message_content = JSON.parse(content);
+            for (key in message_content) {
+                if (key == 'city') {
+                    city = message_content[key]
+                } else if (key == 'date') {
+                    date = message_content[key]
+                } else if (key == 'temp') {
+                    temp = message_content[key]
+                } else if (key == 'pressure') {
+                    pres = message_content[key]
+                }
+                else if (key == 'humidity') {
+                    humi = message_content[key]
+                }
+            }
+            line = measure + " " + "temperature" + "=" + temp+ " " + sep
 
-		// Write output content
-		outputStream.write(line.getBytes(StandardCharsets.UTF_8));
-		
-	    } catch (e) {
-		error = true;
-		log.error('Something went wrong', e)
-		outputStream.write(content.getBytes(StandardCharsets.UTF_8));
-	    }
-	}));
+            // Write output content
+            outputStream.write(line.getBytes(StandardCharsets.UTF_8));
 
-	if (error) {
-	    session.transfer(flowFile, REL_FAILURE)
-	} else {
-	    session.transfer(flowFile, REL_SUCCESS)
-	}
+        } catch (e) {
+            error = true;
+            log.error('Something went wrong', e)
+            outputStream.write(content.getBytes(StandardCharsets.UTF_8));
+        }
+    }));
+
+    if (error) {
+        session.transfer(flowFile, REL_FAILURE)
+    } else {
+        session.transfer(flowFile, REL_SUCCESS)
+    }
 }</value>
                     </entry>
                     <entry>
@@ -1620,14 +1720,14 @@ if (flowFile != null) {
             <executionNodeRestricted>false</executionNodeRestricted>
             <name>ExecuteScript_ECAM_Data_Temp</name>
             <relationships>
-                <autoTerminate>false</autoTerminate>
+                <autoTerminate>true</autoTerminate>
                 <name>failure</name>
             </relationships>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.script.ExecuteScript</type>
         </processors>
@@ -1635,8 +1735,8 @@ if (flowFile != null) {
             <id>b66860f9-308a-34c9-0000-000000000000</id>
             <parentGroupId>f001a5af-17a6-3b44-0000-000000000000</parentGroupId>
             <position>
-                <x>1135.8292236328125</x>
-                <y>789.6510083118588</y>
+                <x>1273.6983642578125</x>
+                <y>781.6571728626401</y>
             </position>
             <bundle>
                 <artifact>nifi-influxdb-nar</artifact>
@@ -1709,7 +1809,7 @@ if (flowFile != null) {
                 <properties>
                     <entry>
                         <key>influxdb-dbname</key>
-                        <value>iot_beta</value>
+                        <value>iot</value>
                     </entry>
                     <entry>
                         <key>influxdb-url</key>
@@ -1770,5 +1870,5 @@ if (flowFile != null) {
             <type>org.apache.nifi.processors.influxdb.PutInfluxDB</type>
         </processors>
     </snippet>
-    <timestamp>11/22/2020 17:41:22 UTC</timestamp>
+    <timestamp>11/22/2020 20:01:07 UTC</timestamp>
 </template>

@@ -46,7 +46,7 @@
     "spec": {
       "location": {
         "name": "city",
-        "localtime_epoch": "time"
+        "localtime_epoch": "date"
       },
       "current": {
         "temperature": "temp",
@@ -58,7 +58,7 @@
   {
     "operation": "modify-overwrite-beta",
     "spec": {
-      "time": "=toString",
+      "date": "=toString",
       "pressure": "=toString",
       "temp": "=toString",
       "humidity": "=toString"
