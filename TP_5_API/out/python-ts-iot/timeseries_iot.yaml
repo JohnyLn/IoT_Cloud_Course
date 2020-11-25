@@ -1,0 +1,58 @@
+# SECTION METADATA
+# Déclaration de la version d'OpenAPI (indique la structure à utiliser)
+openapi: 3.0.0
+# Déclaration des informations générales sur l'API
+info:
+    title: TimeSeries API IoT
+    description: Optionnel sur une ou plusieurs lignes.
+    version: 1.0.0
+# SECTION SERVERS
+# Déclaration de l'URL d'accès à l'API. Pour tous les chemins définis par la suite,
+# il faudra d'abord renseigner l'URL déclaré ici puis y ajoute le chemin voulu.
+# Note: il est possible de déclarer 1 à N serveurs dans cette partie.
+servers:
+    - url: http://localhost:8080/v1
+      description: Description optionnelle. Par exemple, ici, serveur interne dédié au test.
+    - url: http://api.example.com/v1
+      description: Description optionnelle. Par exemple, ici, serveur de production.
+# SECTION PATHS
+# Déclaration des différents chemins de l'API et du type de requête HTTP. 
+paths:
+    /mean/{sensorId}:
+        get:
+            summary: Renvoie la moyenne d'un capteur entre deux dates
+            description: Description optionnelle.
+            # SOUS-SECTION PARAMETERS
+            # Déclaration des différents paramètres de la requête, avec leurs origines et leurs types.
+            parameters:
+                - in: path
+                  name: sensorId
+                  description: L'identifiant du capteur où récupérer les données.
+                  required: true
+                  schema:
+                    type: string
+                - in: query
+                  name: startDate
+                  description: Integer/timestamp de la date de début.
+                  required: true
+                  schema:
+                    type: integer
+                - in: query
+                  name: endDate
+                  description: Integer/timestamp de la date de fin.
+                  required: true
+                  schema:
+                    type: integer
+            # SOUS-SECTION RESPONSES
+            # Déclaration des différentes réponses possibles, avec le code HTTP et les donées renvoyés.
+            responses:
+                '200':
+                    description: Une JSON array de la moyenne des valeurs entre les deux dates fournies.
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    type: integer
+                default:
+                    description: Unexpected error.
