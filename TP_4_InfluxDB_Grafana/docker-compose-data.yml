@@ -14,8 +14,8 @@ services:
       SENZING_RABBITMQ_PASSWORD: rabbitmq
       SENZING_RABBITMQ_USERNAME: rabbitmq
       SENZING_RABBITMQ_QUEUE: data_gen
-      MIN_VALUE: 0
-      MAX_VALUE: 50
+      MIN_VALUE: 18
+      MAX_VALUE: 30
       SENZING_DATA_TEMPLATE: '{"SENSOR":"Temp1","DATE":"date_now", "VALUE":"float"}'
     tty: true
     labels:

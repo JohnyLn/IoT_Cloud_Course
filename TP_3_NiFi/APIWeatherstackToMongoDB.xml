@@ -1,51 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
-    <description>Part the TP 5 Nifi in Webservices courses
-Add weather data from the API Weather to a mongodb database and collection</description>
-    <groupId>dba800e0-0175-1000-cf06-732286b0f999</groupId>
-    <name>ApiWeatherstackToMongoDB</name>
+    <description>Add weather data from the API Weatherstack to a mongodb data base named weather and inside the collection paris.</description>
+    <groupId>06ec32be-0177-1000-2ee1-a1f2af5f9410</groupId>
+    <name>APIWeatherstackToMongoDB</name>
     <snippet>
         <connections>
-            <id>058787de-7561-365a-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>b94be2f5-d9a5-3cf7-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>Response</selectedRelationships>
-            <source>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>65f89260-ee10-3c02-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>48e13dad-7d24-3751-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
+            <id>1ab85756-17d2-3564-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1311.1609881747547</x>
-                <y>40.0</y>
+                <x>211.1866455078125</x>
+                <y>486.1211301949311</y>
             </bends>
             <bends>
-                <x>1378.6879657138172</x>
-                <y>73.11827087402344</y>
+                <x>171.505859375</x>
+                <y>526.7188932564545</y>
             </bends>
             <destination>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>b94be2f5-d9a5-3cf7-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>d9a6b4dc-2444-364a-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -57,28 +31,28 @@ Add weather data from the API Weather to a mongodb database and collection</desc
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>b94be2f5-d9a5-3cf7-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>d9a6b4dc-2444-364a-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>a9f37210-1b1a-3ff8-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
+            <id>6557eebe-b7fd-3411-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1157.2393977431495</x>
-                <y>335.9268093861992</y>
+                <x>705.4973548808948</x>
+                <y>68.99178723738032</y>
             </bends>
             <bends>
-                <x>1198.9471614150245</x>
-                <y>388.9059353627617</y>
+                <x>674.9022621074573</x>
+                <y>24.735988897536572</y>
             </bends>
             <destination>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>5c333527-b03a-32a8-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>2470a504-79da-3719-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -90,53 +64,28 @@ Add weather data from the API Weather to a mongodb database and collection</desc
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>5c333527-b03a-32a8-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>2470a504-79da-3719-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>ebd1c600-9f07-3ca7-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>5c333527-b03a-32a8-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>matched</selectedRelationships>
-            <source>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>b94be2f5-d9a5-3cf7-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>fba854d5-b7af-360c-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
+            <id>bc7953ed-5e92-384e-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>130.33058166503906</x>
-                <y>202.35637072059615</y>
+                <x>141.07767454497161</x>
+                <y>45.122337341308594</y>
             </bends>
             <bends>
-                <x>154.16360473632812</x>
-                <y>283.1407106253813</y>
+                <x>174.88359800688568</x>
+                <y>0.0</y>
             </bends>
             <destination>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>65f89260-ee10-3c02-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>e0211bf0-1dc6-32e5-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -148,18 +97,68 @@ Add weather data from the API Weather to a mongodb database and collection</desc
             <name></name>
             <selectedRelationships>Failure</selectedRelationships>
             <source>
-                <groupId>a9477a71-8f0d-3809-0000-000000000000</groupId>
-                <id>65f89260-ee10-3c02-0000-000000000000</id>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>e0211bf0-1dc6-32e5-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>c40c214f-d52b-3d1a-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>2470a504-79da-3719-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>matched</selectedRelationships>
+            <source>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>d9a6b4dc-2444-364a-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>ed6132de-8f5a-3ec8-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>d9a6b4dc-2444-364a-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>Response</selectedRelationships>
+            <source>
+                <groupId>89ea303e-e093-3b16-0000-000000000000</groupId>
+                <id>e0211bf0-1dc6-32e5-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <processors>
-            <id>5c333527-b03a-32a8-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
+            <id>2470a504-79da-3719-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
             <position>
-                <x>694.2393977431494</x>
-                <y>295.9268093861992</y>
+                <x>496.80399550589436</x>
+                <y>83.84225110456782</y>
             </position>
             <bundle>
                 <artifact>nifi-mongodb-nar</artifact>
@@ -325,11 +324,107 @@ Add weather data from the API Weather to a mongodb database and collection</desc
             <type>org.apache.nifi.processors.mongodb.PutMongo</type>
         </processors>
         <processors>
-            <id>65f89260-ee10-3c02-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
+            <id>d9a6b4dc-2444-364a-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
-                <y>11.413831505508256</y>
+                <y>327.6938841011811</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.9.2</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Destination</key>
+                        <value>
+                            <name>Destination</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Return Type</key>
+                        <value>
+                            <name>Return Type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Path Not Found Behavior</key>
+                        <value>
+                            <name>Path Not Found Behavior</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Null Value Representation</key>
+                        <value>
+                            <name>Null Value Representation</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>current</key>
+                        <value>
+                            <name>current</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Destination</key>
+                        <value>flowfile-content</value>
+                    </entry>
+                    <entry>
+                        <key>Return Type</key>
+                        <value>json</value>
+                    </entry>
+                    <entry>
+                        <key>Path Not Found Behavior</key>
+                        <value>warn</value>
+                    </entry>
+                    <entry>
+                        <key>Null Value Representation</key>
+                        <value>empty string</value>
+                    </entry>
+                    <entry>
+                        <key>current</key>
+                        <value>$.current</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>EvaluateJsonPath</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>matched</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>unmatched</name>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+        </processors>
+        <processors>
+            <id>e0211bf0-1dc6-32e5-0000-000000000000</id>
+            <parentGroupId>89ea303e-e093-3b16-0000-000000000000</parentGroupId>
+            <position>
+                <x>3.267478622120052</x>
+                <y>74.82817459106434</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -645,106 +740,10 @@ Add weather data from the API Weather to a mongodb database and collection</desc
                 <autoTerminate>true</autoTerminate>
                 <name>Retry</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
         </processors>
-        <processors>
-            <id>b94be2f5-d9a5-3cf7-0000-000000000000</id>
-            <parentGroupId>a9477a71-8f0d-3809-0000-000000000000</parentGroupId>
-            <position>
-                <x>848.1609881747547</x>
-                <y>0.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-standard-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.9.2</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>Destination</key>
-                        <value>
-                            <name>Destination</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Return Type</key>
-                        <value>
-                            <name>Return Type</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Path Not Found Behavior</key>
-                        <value>
-                            <name>Path Not Found Behavior</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Null Value Representation</key>
-                        <value>
-                            <name>Null Value Representation</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>current</key>
-                        <value>
-                            <name>current</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>Destination</key>
-                        <value>flowfile-content</value>
-                    </entry>
-                    <entry>
-                        <key>Return Type</key>
-                        <value>json</value>
-                    </entry>
-                    <entry>
-                        <key>Path Not Found Behavior</key>
-                        <value>warn</value>
-                    </entry>
-                    <entry>
-                        <key>Null Value Representation</key>
-                        <value>empty string</value>
-                    </entry>
-                    <entry>
-                        <key>current</key>
-                        <value>$.current</value>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>EvaluateJsonPath</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>failure</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>matched</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>true</autoTerminate>
-                <name>unmatched</name>
-            </relationships>
-            <state>RUNNING</state>
-            <style/>
-            <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
-        </processors>
     </snippet>
-    <timestamp>11/18/2020 14:18:54 UTC</timestamp>
+    <timestamp>01/15/2021 17:41:15 UTC</timestamp>
 </template>
